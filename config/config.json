@@ -1,0 +1,12 @@
+{
+    "signal-detector": {
+        "path": "/home/shamir0xe/Documents/signal-detector",
+        "options": [
+            "--memory"
+        ]
+    },
+    "past-candles": "9999",
+    "markets": ["btcusdt", "ethusdt", "xmrusdt", "xlmusdt", "bnbusdt", "xrpusdt", "dogeusdt", "adausdt", "ltcusdt"],
+    "trade-chunk": 10,
+    "initial-balance": 60
+}
