@@ -17,10 +17,11 @@ class App:
 
     def collect_signals(self) -> App:
         debug_text('Collecting Signals')
-        tp = TerminalProcess(len(self.config.get('markets')))
+        markets = self.config.get('markets')[:self.config.get('market-count')]
+        tp = TerminalProcess(len(markets))
         exec_path = os.path.join(self.config.get('signal-detector.path'), 'main.py')
         self.signals = []
-        for market in self.config.get('markets'):
+        for market in markets:
             signals = PythonExecutor(exec_path, [
                 *self.config.get('signal-detector.options'),
                 "--market {}".format(market),
@@ -63,7 +64,7 @@ class App:
                     alive_set.remove(event[2])
                     alive_markets.remove(self.signals[event[2]].market)
                     gains.append((event[0], hold + balance))
-                    debug_text('out({:01d}->{:02d}): {}/{} gain: {:03f}'.format(len(alive_set), event[2], self.signals[event[2]].market, self.signals[event[2]].name, self.signals[event[2]].gain))
+                    debug_text('out({:01d}->{:02d}): {}/{} gain: {:03f} ~~ balance: {:03f}'.format(len(alive_set), event[2], self.signals[event[2]].market, self.signals[event[2]].name, self.signals[event[2]].gain, balance + hold))
         self.result = {
             "gains": gains,
             "total": balance

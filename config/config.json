@@ -6,7 +6,19 @@
         ]
     },
     "past-candles": "9999",
-    "markets": ["btcusdt", "ethusdt", "xmrusdt", "xlmusdt", "bnbusdt", "xrpusdt", "dogeusdt", "adausdt", "ltcusdt"],
+    "markets": [
+        "btcusdt", "ethusdt", "xmrusdt", "xlmusdt", "bnbusdt", "xrpusdt", "dogeusdt", 
+        "adausdt", "ltcusdt", "dotusdt", "bchusdt", "uniusdt", "etcusdt", "linkusdt",
+        "usdcusdt", "vetusdt", "filusdt", "trxusdt", "eosusdt", "neousdt", "lunausdt", 
+        "cakeusdt", "atomusdt", "aaveusdt", "xtzusdt", "bttusdt", "crousdt", "avaxusdt", 
+        "mkrusdt", "algousdt", "htusdt", "dashusdt", "ksmusdt", "compusdt", "wavesusdt", 
+        "xemusdt", "zecusdt", "zilusdt", "chzusdt", "snxusdt", "sushiusdt" , "enjusdt", 
+        "stxusdt", "batusdt", "dgbusdt", "yfiusdt", "grtusdt", "ontusdt", "ftmusdt", 
+        "manausdt", "umausdt", "omgusdt", "iostusdt", "zenusdt", "nanousdt", "kcsusdt", 
+        "1inchusdt", "sxpusdt", "winusdt", "oneusdt", "daousdt", "velousdt", "maskusdt", 
+        "ankrusdt", "roseusdt", "lrcusdt", "dodousdt"
+    ],
+    "market-count": 67,
     "trade-chunk": 10,
     "initial-balance": 60
 }
